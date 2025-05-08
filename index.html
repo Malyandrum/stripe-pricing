@@ -4,31 +4,159 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Lessons with Mike</title>
-  <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-    }
     body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f8f5d4;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      background: #f9f9f9;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
     }
-    stripe-pricing-table {
-      width: 100%;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
       max-width: 1200px;
-      margin: 0 auto;
+      width: 100%;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      flex: 1 1 260px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+
+    .features {
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    .features li {
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-btn {
+      display: inline-block;
+      margin-top: auto;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      background: #fa3f05;
+      color: white;
+    }
+
+    .card.best-value {
+      border: 3px solid #f17d28;
+    }
+
+    .card.best-value::before {
+      content: "Best Value";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f17d28;
+      color: white;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+
+    .card.advanced {
+      background: #9a70b8;
+      color: white;
+    }
+
+    .card.advanced .subscribe-btn {
+      background: white;
+      color: #9a70b8;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
-  <stripe-pricing-table
-    pricing-table-id="prctbl_1RMTA3S7g4F9nbsFJgA0TZ1f"
-    publishable-key="pk_live_51QU9WbS7g4F9nbsFYXpgsLicP1R0qWCuCXq2Ztg4UmICJ3OirgpmIni3SDZN2cOm8UUSfFlHYDBcVrYkhizpN5Sj00J6eblIzP">
-  </stripe-pricing-table>
+  <h1>Choose Your Lesson Plan</h1>
+  <div class="pricing-container">
+    <div class="card">
+      <h2>Monthly Lessons</h2>
+      <p>This gives you access to a monthly 1hr lesson slot in person or online with Mike, to maintain and continue working towards your musical goals.</p>
+      <p class="price">£100<span style="font-size: 1rem;">/month</span></p>
+      <ul class="features">
+        <li>Great for maintaining progress</li>
+        <li>Affordable and consistent</li>
+      </ul>
+      <a class="subscribe-btn" href="https://buy.stripe.com/aEUaHk7mUdYfgkU145">Subscribe</a>
+    </div>
+
+    <div class="card best-value">
+      <h2>Bi-Monthly Lessons</h2>
+      <p>This gives you access to a bi-monthly 1hr lesson slot in person or online with Mike, to help you retain new knowledge and stay motivated.</p>
+      <p class="price">£175<span style="font-size: 1rem;">/month</span></p>
+      <ul class="features">
+        <li>Increased retention of skills</li>
+        <li>Improved value for commitment</li>
+      </ul>
+      <a class="subscribe-btn" href="https://buy.stripe.com/fZe5n08qY9HZ3y8aEG">Subscribe</a>
+    </div>
+
+    <div class="card">
+      <h2>Weekly Lessons</h2>
+      <p>This gives you access to a weekly 1hr lesson slot in person or online with Mike, to guarantee strong musical development.</p>
+      <p class="price">£300<span style="font-size: 1rem;">/month</span></p>
+      <ul class="features">
+        <li>Maximum retention & momentum</li>
+        <li>Ideal for serious progress</li>
+      </ul>
+      <a class="subscribe-btn" href="https://buy.stripe.com/fZe6r4bDa5rJecM147">Subscribe</a>
+    </div>
+
+    <div class="card advanced">
+      <h2>Advanced Musical Development</h2>
+      <p>Book a free meeting now to explore more advanced musical development techniques, such as guided group songwriting, band rehearsals, and IEM/Playback development.</p>
+      <p class="price">Custom</p>
+      <ul class="features">
+        <li>Guided band dynamics & co-writing</li>
+        <li>Experience a guided professional experience</li>
+        <li>Fast-track your artist journey</li>
+      </ul>
+      <a class="subscribe-btn" href="https://book.stripe.com/aEU8zc7mU1btecM8wA">Book a demo</a>
+    </div>
+  </div>
 </body>
 </html>
