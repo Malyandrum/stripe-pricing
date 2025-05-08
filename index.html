@@ -4,18 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Lessons with Mike</title>
-
-  <!-- Open Graph for social sharing -->
-  <meta property="og:title" content="Book Lessons with Mike" />
-  <meta property="og:description" content="Explore personalized music lessons and advanced musical development with Mike Malyan." />
-  <meta property="og:image" content="https://yourdomain.com/preview-image.jpg" />
-  <meta property="og:url" content="https://prismatic-zuccutto-bdc8be.netlify.app/" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Book Lessons with Mike" />
-  <meta name="twitter:description" content="Explore personalized music lessons and advanced musical development with Mike Malyan." />
-  <meta name="twitter:image" content="https://yourdomain.com/preview-image.jpg" />
-
   <style>
     body {
       margin: 0;
@@ -32,6 +20,25 @@
       margin-bottom: 2rem;
     }
 
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .single-session {
+      opacity: 0.6;
+      filter: grayscale(40%);
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+
     .pricing-container {
       display: flex;
       flex-wrap: wrap;
@@ -39,19 +46,6 @@
       gap: 1.5rem;
       max-width: 1200px;
       width: 100%;
-    }
-
-    .card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      flex: 1 1 260px;
-      max-width: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
     }
 
     .card h2 {
@@ -62,7 +56,13 @@
     .price {
       font-size: 2rem;
       font-weight: bold;
-      margin: 1rem 0;
+      margin: 1rem 0 0.2rem;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 1rem;
     }
 
     .features {
@@ -110,6 +110,17 @@
       font-weight: bold;
     }
 
+    .discount-badge {
+      background: #00a86b;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      display: inline-block;
+      margin-top: 0.25rem;
+    }
+
     @media (max-width: 768px) {
       .pricing-container {
         flex-direction: column;
@@ -120,11 +131,23 @@
 </head>
 <body>
   <h1>Choose Your Lesson Plan</h1>
+
+  <!-- One-Off Session -->
+  <div class="card single-session">
+    <h2>Single Session</h2>
+    <p>Book a one-time 1hr lesson slot in person or online with Mike to work towards your musical goals.</p>
+    <p class="price">£120</p>
+    <p class="note">one-off</p>
+    <a class="subscribe-btn" href="https://calendly.com/malyandrum/60min?share_attribution=expiring_link">Book a session</a>
+  </div>
+
+  <!-- Subscription Tiers -->
   <div class="pricing-container">
     <div class="card">
       <h2>Monthly Lessons</h2>
-      <p>This gives you access to a monthly 1hr lesson slot in person or online with Mike, to maintain and continue working towards your musical goals.</p>
+      <p>One 1hr lesson slot per month to stay consistent and keep moving forward.</p>
       <p class="price">£100<span style="font-size: 1rem;">/month</span></p>
+      <span class="discount-badge">17% off</span>
       <ul class="features">
         <li>Great for maintaining progress</li>
         <li>Affordable and consistent</li>
@@ -134,21 +157,23 @@
 
     <div class="card best-value">
       <h2>Bi-Monthly Lessons</h2>
-      <p>This gives you access to a bi-monthly 1hr lesson slot in person or online with Mike, to help you retain new knowledge and stay motivated.</p>
+      <p>Two 1hr lessons per month to help you retain new knowledge and stay motivated.</p>
       <p class="price">£175<span style="font-size: 1rem;">/month</span></p>
+      <span class="discount-badge">27% off</span>
       <ul class="features">
-        <li>Increased retention of skills</li>
         <li>Improved value for commitment</li>
+        <li>Increased skill retention</li>
       </ul>
       <a class="subscribe-btn" href="https://buy.stripe.com/fZe5n08qY9HZ3y8aEG">Subscribe</a>
     </div>
 
     <div class="card">
       <h2>Weekly Lessons</h2>
-      <p>This gives you access to a weekly 1hr lesson slot in person or online with Mike, to guarantee strong musical development.</p>
+      <p>Four 1hr lessons per month to guarantee strong musical development.</p>
       <p class="price">£300<span style="font-size: 1rem;">/month</span></p>
+      <span class="discount-badge">38% off</span>
       <ul class="features">
-        <li>Maximum retention & momentum</li>
+        <li>Maximum momentum</li>
         <li>Ideal for serious progress</li>
       </ul>
       <a class="subscribe-btn" href="https://buy.stripe.com/fZe6r4bDa5rJecM147">Subscribe</a>
@@ -156,8 +181,8 @@
 
     <div class="card">
       <h2>Advanced Musical Development</h2>
-      <p>Book a free meeting now to explore more advanced musical development techniques, such as guided group songwriting, band rehearsals, and IEM/Playback development.</p>
-      <p class="price">Contact Us</p>
+      <p>Explore guided songwriting, band rehearsals, IEM/Playback systems and more.</p>
+      <p class="price">Priced to scale</p>
       <ul class="features">
         <li>Book your free call now</li>
         <li>Guided band dynamics & co-writing</li>
