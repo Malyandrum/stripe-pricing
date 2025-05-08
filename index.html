@@ -20,25 +20,6 @@
       margin-bottom: 2rem;
     }
 
-    .card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      max-width: 320px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-    }
-
-    .single-session {
-      opacity: 0.6;
-      filter: grayscale(40%);
-      margin-bottom: 2.5rem;
-      text-align: center;
-    }
-
     .pricing-container {
       display: flex;
       flex-wrap: wrap;
@@ -46,6 +27,19 @@
       gap: 1.5rem;
       max-width: 1200px;
       width: 100%;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      flex: 1 1 260px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
     }
 
     .card h2 {
@@ -57,6 +51,15 @@
       font-size: 2rem;
       font-weight: bold;
       margin: 1rem 0 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .discount-text {
+      font-size: 0.85rem;
+      color: #0077b6;
+      font-weight: 500;
     }
 
     .note {
@@ -83,13 +86,25 @@
       font-weight: bold;
       text-align: center;
       text-decoration: none;
-      background: #fa3f05;
-      color: white;
       transition: background 0.2s;
     }
 
-    .subscribe-btn:hover {
-      background: #c63204;
+    .subscribe-green {
+      background: #2e7d32;
+      color: white;
+    }
+
+    .subscribe-green:hover {
+      background: #1b5e20;
+    }
+
+    .subscribe-grey {
+      background: #888;
+      color: white;
+    }
+
+    .subscribe-grey:hover {
+      background: #666;
     }
 
     .card.best-value {
@@ -110,17 +125,6 @@
       font-weight: bold;
     }
 
-    .discount-badge {
-      background: #00a86b;
-      color: white;
-      font-size: 0.75rem;
-      font-weight: bold;
-      padding: 0.25rem 0.5rem;
-      border-radius: 999px;
-      display: inline-block;
-      margin-top: 0.25rem;
-    }
-
     @media (max-width: 768px) {
       .pricing-container {
         flex-direction: column;
@@ -133,12 +137,19 @@
   <h1>Choose Your Lesson Plan</h1>
 
   <!-- One-Off Session -->
-  <div class="card single-session">
-    <h2>Single Session</h2>
-    <p>Book a one-time 1hr lesson slot in person or online with Mike to work towards your musical goals.</p>
-    <p class="price">£120</p>
-    <p class="note">one-off</p>
-    <a class="subscribe-btn" href="https://calendly.com/malyandrum/60min?share_attribution=expiring_link">Book a session</a>
+  <div class="pricing-container" style="margin-bottom: 2rem;">
+    <div class="card">
+      <h2>Single Session</h2>
+      <p>Book a one-time 1hr lesson slot in person or online with Mike to work towards your musical goals.</p>
+      <p class="price">
+        £120 <span class="note">one-off</span>
+      </p>
+      <ul class="features">
+        <li>Great for first-timers or check-ins</li>
+        <li>No subscription required</li>
+      </ul>
+      <a class="subscribe-btn subscribe-grey" href="https://calendly.com/malyandrum/60min?share_attribution=expiring_link">Book a session</a>
+    </div>
   </div>
 
   <!-- Subscription Tiers -->
@@ -146,39 +157,45 @@
     <div class="card">
       <h2>Monthly Lessons</h2>
       <p>One 1hr lesson slot per month to stay consistent and keep moving forward.</p>
-      <p class="price">£100<span style="font-size: 1rem;">/month</span></p>
-      <span class="discount-badge">17% off</span>
+      <p class="price">
+        £100<span class="discount-text">(17% off)</span>
+      </p>
       <ul class="features">
         <li>Great for maintaining progress</li>
         <li>Affordable and consistent</li>
       </ul>
-      <a class="subscribe-btn" href="https://buy.stripe.com/aEUaHk7mUdYfgkU145">Subscribe</a>
+      <a class="subscribe-btn subscribe-green" href="https://buy.stripe.com/aEUaHk7mUdYfgkU145">Subscribe</a>
     </div>
 
     <div class="card best-value">
       <h2>Bi-Monthly Lessons</h2>
       <p>Two 1hr lessons per month to help you retain new knowledge and stay motivated.</p>
-      <p class="price">£175<span style="font-size: 1rem;">/month</span></p>
-      <span class="discount-badge">27% off</span>
+      <p class="price">
+        £175<span class="discount-text">(27% off)</span>
+      </p>
       <ul class="features">
         <li>Improved value for commitment</li>
         <li>Increased skill retention</li>
       </ul>
-      <a class="subscribe-btn" href="https://buy.stripe.com/fZe5n08qY9HZ3y8aEG">Subscribe</a>
+      <a class="subscribe-btn subscribe-green" href="https://buy.stripe.com/fZe5n08qY9HZ3y8aEG">Subscribe</a>
     </div>
 
     <div class="card">
       <h2>Weekly Lessons</h2>
       <p>Four 1hr lessons per month to guarantee strong musical development.</p>
-      <p class="price">£300<span style="font-size: 1rem;">/month</span></p>
-      <span class="discount-badge">38% off</span>
+      <p class="price">
+        £300<span class="discount-text">(38% off)</span>
+      </p>
       <ul class="features">
         <li>Maximum momentum</li>
         <li>Ideal for serious progress</li>
       </ul>
-      <a class="subscribe-btn" href="https://buy.stripe.com/fZe6r4bDa5rJecM147">Subscribe</a>
+      <a class="subscribe-btn subscribe-green" href="https://buy.stripe.com/fZe6r4bDa5rJecM147">Subscribe</a>
     </div>
+  </div>
 
+  <!-- Advanced Tier -->
+  <div class="pricing-container" style="margin-top: 2rem;">
     <div class="card">
       <h2>Advanced Musical Development</h2>
       <p>Explore guided songwriting, band rehearsals, IEM/Playback systems and more.</p>
@@ -189,7 +206,7 @@
         <li>Experience a guided professional experience</li>
         <li>Fast-track your artist journey</li>
       </ul>
-      <a class="subscribe-btn" href="https://book.stripe.com/aEU8zc7mU1btecM8wA">Book a demo</a>
+      <a class="subscribe-btn subscribe-green" href="https://book.stripe.com/aEU8zc7mU1btecM8wA">Book a demo</a>
     </div>
   </div>
 </body>
