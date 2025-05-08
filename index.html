@@ -24,7 +24,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1rem;
       max-width: 1200px;
       width: 100%;
     }
@@ -32,10 +32,10 @@
     .card {
       background: white;
       border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
-      flex: 1 1 260px;
-      max-width: 320px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      flex: 1 1 240px;
+      max-width: 260px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -44,16 +44,16 @@
 
     .card h2 {
       margin-top: 0;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
     }
 
     .price {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bold;
       margin: 1rem 0 0.2rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
 
     .discount-text {
@@ -70,7 +70,7 @@
 
     .features {
       margin: 1rem 0;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       padding-left: 1rem;
     }
 
@@ -81,7 +81,7 @@
     .subscribe-btn {
       display: inline-block;
       margin-top: auto;
-      padding: 0.75rem 1.25rem;
+      padding: 0.6rem 1rem;
       border-radius: 8px;
       font-weight: bold;
       text-align: center;
@@ -136,7 +136,7 @@
 <body>
   <h1>Choose Your Lesson Plan</h1>
 
-  <!-- One-Off Session -->
+  <!-- Single Session -->
   <div class="pricing-container" style="margin-bottom: 2rem;">
     <div class="card">
       <h2>Single Session</h2>
@@ -144,21 +144,17 @@
       <p class="price">
         £120 <span class="note">one-off</span>
       </p>
-      <ul class="features">
-        <li>Great for first-timers or check-ins</li>
-        <li>No subscription required</li>
-      </ul>
       <a class="subscribe-btn subscribe-grey" href="https://calendly.com/malyandrum/60min?share_attribution=expiring_link">Book a session</a>
     </div>
   </div>
 
-  <!-- Subscription Tiers -->
+  <!-- Regular Paid Tiers -->
   <div class="pricing-container">
     <div class="card">
       <h2>Monthly Lessons</h2>
-      <p>One 1hr lesson slot per month to stay consistent and keep moving forward.</p>
+      <p>This gives you access to a monthly 1hr lesson slot in person or online with Mike, to maintain and continue working towards your musical goals.</p>
       <p class="price">
-        £100<span class="discount-text">(17% off)</span>
+        £100<span class="discount-text">(17% saving)</span><span style="font-size:1rem;">/month</span>
       </p>
       <ul class="features">
         <li>Great for maintaining progress</li>
@@ -169,36 +165,37 @@
 
     <div class="card best-value">
       <h2>Bi-Monthly Lessons</h2>
-      <p>Two 1hr lessons per month to help you retain new knowledge and stay motivated.</p>
+      <p>This gives you access to a bi-monthly 1hr lesson slot in person or online with Mike, to maintain and continue working towards your musical goals.</p>
       <p class="price">
-        £175<span class="discount-text">(27% off)</span>
+        £175<span class="discount-text">(27% saving)</span><span style="font-size:1rem;">/month</span>
       </p>
       <ul class="features">
-        <li>Improved value for commitment</li>
-        <li>Increased skill retention</li>
+        <li>Increased lesson frequency to help retain new knowledge and skills</li>
+        <li>Improved value to assist with added frequency</li>
       </ul>
       <a class="subscribe-btn subscribe-green" href="https://buy.stripe.com/fZe5n08qY9HZ3y8aEG">Subscribe</a>
     </div>
 
     <div class="card">
       <h2>Weekly Lessons</h2>
-      <p>Four 1hr lessons per month to guarantee strong musical development.</p>
+      <p>This gives you access to a weekly 1hr lesson slot in person or online with Mike, to maintain and continue working towards your musical goals.</p>
       <p class="price">
-        £300<span class="discount-text">(38% off)</span>
+        £300<span class="discount-text">(38% saving)</span><span style="font-size:1rem;">/month</span>
       </p>
       <ul class="features">
-        <li>Maximum momentum</li>
-        <li>Ideal for serious progress</li>
+        <li>Weekly sessions to help guarantee maximum retention of new skills and techniques</li>
+        <li>Constant encouragement to aid in regular motivation for practice and creativity</li>
+        <li>Best value to reflect the mutual commitment to your development</li>
       </ul>
       <a class="subscribe-btn subscribe-green" href="https://buy.stripe.com/fZe6r4bDa5rJecM147">Subscribe</a>
     </div>
   </div>
 
-  <!-- Advanced Tier -->
+  <!-- Advanced -->
   <div class="pricing-container" style="margin-top: 2rem;">
     <div class="card">
       <h2>Advanced Musical Development</h2>
-      <p>Explore guided songwriting, band rehearsals, IEM/Playback systems and more.</p>
+      <p>Book a free meeting now to explore more advanced musical development techniques, such as guided group songwriting, band rehearsals, and IEM/Playback development.</p>
       <p class="price">Priced to scale</p>
       <ul class="features">
         <li>Book your free call now</li>
