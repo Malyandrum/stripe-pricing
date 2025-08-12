@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Lessons with Mike</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: linear-gradient(to bottom right, #00c9ff, #ffffff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+      flex: 1 1 240px;
+      max-width: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.15rem;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 1rem 0 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .discount-text {
+      font-size: 0.85rem;
+      color: #0077b6;
+      font-weight: 500;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .features {
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      padding-left: 1rem;
+    }
+
+    .features li {
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-btn {
+      display: inline-block;
+      margin-top: auto;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .subscribe-green {
+      background: #2e7d32;
+      color: white;
+    }
+
+    .subscribe-green:hover {
+      background: #1b5e20;
+    }
+
+    .subscribe-grey {
+      background: #888;
+      color: white;
+    }
+
+    .subscribe-grey:hover {
+      background: #666;
+    }
+
+    .card.best-value {
+      border: 3px solid #f17d28;
+    }
+
+    .card.best-value::before {
+      content: "Best Value";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f17d28;
+      color: white;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Choose Your Lesson Plan</h1>
+
+  <!-- Single Session -->
+  <div class="pricing-container" style="margin-bottom: 2rem;">
+    <div class="card">
+      <h2>Single Session</h2>
+      <p>Book a one-time 1hr lesson slot in person or online with Mike to work towards your musical goals.</p>
+      <p class="price">
+        £120 <span class="note">one-off</span>
+      </p>
+      <a class="subscribe-btn subscribe-grey" href="https://buy.stripe.com/4gw4iWePm07p9Ww4gm">Book a session</a>
+    </div>
+  </div>
+
+  <!-- Regular Paid Tiers -->
+  <div class="pricing-container">
+    <div class="card">
+      <h2>Monthly Lessons</h2>
+      <p>This gives you access to a monthly 1hr lesson slot in person or online with Mike, to maintain and continue working towards your musical goals.</p>
+      <p class="price">
+        £100 <span style="font-size: 0.9rem; font-weight: 400;">/month</span> <span class="discount-text">(17% saving)</span>
+      </p>
+      <ul class="features">
+        <li>Great for maintaining progress</li>
+        <li>Affordable and consistent</li>
+      </ul>
+      <a class="subscribe-btn subscribe-green" href="https://buy.stripe.com/aEUaHk7mUdYfgkU145">Subscribe</a>
+    </div>
+
+    <div class="card best-value">
+      <h2>Bi-Monthly Lessons</h2>
+      <p>This gives you access to a bi-monthly 1hr lesson slot in person or online with Mike, to maintain and continue working towards your musical goals.</p>
+      <p class="price">
+        £175 <span style="font-size: 0.9rem; font-weight: 400;">/month</span> <span class="discount-text">(27% saving)</span>
+      </p>
+      <ul class="features">
+        <li>Increased lesson frequency to help retain new knowledge and skills</li>
+        <li>Improved value to assist with added frequency</li>
+      </ul>
+      <a class="subscribe-btn subscribe-green" href="https://buy.stripe.com/fZe5n08qY9HZ3y8aEG">Subscribe</a>
+    </div>
+
+    <div class="card">
+      <h2>Weekly Lessons</h2>
+      <p>This gives you access to a weekly 1hr lesson slot in person or online with Mike, to maintain and continue working towards your musical goals.</p>
+      <p class="price">
+        £300 <span style="font-size: 0.9rem; font-weight: 400;">/month</span> <span class="discount-text">(38% saving)</span>
+      </p>
+      <ul class="features">
+        <li>Weekly sessions to help guarantee maximum retention of new skills and techniques</li>
+        <li>Constant encouragement to aid in regular motivation for practice and creativity</li>
+        <li>Best value to reflect the mutual commitment to your development</li>
+      </ul>
+      <a class="subscribe-btn subscribe-green" href="https://buy.stripe.com/fZe6r4bDa5rJecM147">Subscribe</a>
+    </div>
+  </div>
+
+  <!-- Advanced -->
+  <div class="pricing-container" style="margin-top: 2rem;">
+    <div class="card">
+      <h2>Advanced Musical Development</h2>
+      <p>Book a free meeting now to explore more advanced musical development techniques, such as guided group songwriting, band rehearsals, and IEM/Playback development.</p>
+
+      <ul class="features">
+        <li>Book your free call now</li>
+        <li>Guided band dynamics & co-writing</li>
+        <li>Experience a guided professional experience</li>
+        <li>Fast-track your artist journey</li>
+      </ul>
+      <a class="subscribe-btn subscribe-green" href="https://book.stripe.com/aEU8zc7mU1btecM8wA">Book a demo</a>
+    </div>
+  </div>
+</body>
+</html>
